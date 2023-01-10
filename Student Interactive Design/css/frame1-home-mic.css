@@ -1,0 +1,234 @@
+/* screen - frame1-home-mic */
+
+.frame1-home-mic {
+  align-items: flex-start;
+  background-color: var(--white);
+  border: 1px none;
+  display: flex;
+  height: 1024px;
+  width: 1440px;
+}
+
+.frame1-home-mic .overlap-group1 {
+  align-items: center;
+  background-image: url(../img/bluehex-1@1x.png);
+  background-position: 50% 50%;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  gap: 13px;
+  min-height: 1024px;
+  width: 1440px;
+}
+
+.frame1-home-mic .flex-row {
+  align-items: flex-start;
+  display: flex;
+  height: 200px;
+  margin-left: 22.0px;
+  margin-top: 166px;
+  min-width: 1128px;
+}
+
+.frame1-home-mic .overlap-group6 {
+  height: 136px;
+  position: relative;
+  width: 320px;
+}
+
+.frame1-home-mic .rectangle {
+  background-color: var(--black);
+  border: 7px solid;
+  border-color: var(--azure-radiance);
+  cursor: pointer;
+  height: 118px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 320px;
+}
+
+.frame1-home-mic .recordings {
+  left: 18px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  text-align: center;
+  top: 12px;
+  width: 295px;
+}
+
+.frame1-home-mic .ellipse-5 {
+  align-self: flex-end;
+  background-color: var(--alto);
+  border: 1px none;
+  border-radius: 35.5px/31.5px;
+  cursor: pointer;
+  height: 63px;
+  margin-left: 186px;
+  width: 71px;
+}
+
+.frame1-home-mic .overlap-group2 {
+  height: 145px;
+  margin-left: 231px;
+  margin-top: 7px;
+  position: relative;
+  width: 320px;
+}
+
+.frame1-home-mic .rectangle-4 {
+  height: 118px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 320px;
+}
+
+.frame1-home-mic .reminders {
+  left: 13px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  text-align: center;
+  top: 21px;
+  width: 300px;
+}
+
+.frame1-home-mic .overlap-group-container {
+  height: 645px;
+  margin-right: 4.0px;
+  position: relative;
+  width: 1436px;
+}
+
+.frame1-home-mic .overlap-group3 {
+  height: 645px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 1436px;
+}
+
+.frame1-home-mic .ellipse-1 {
+  align-items: flex-start;
+  border: 1px solid;
+  border-color: var(--white);
+  border-radius: 130px;
+  display: flex;
+  height: 267px;
+  left: 570px;
+  min-width: 272px;
+  position: absolute;
+  top: 0;
+}
+
+.frame1-home-mic .overlap-group {
+  border-radius: 135px/132.5px;
+  height: 265px;
+  position: relative;
+  width: 270px;
+}
+
+.frame1-home-mic .ellipse-1-1 {
+  background-color: var(--black);
+  border: 1px none;
+  border-radius: 135px/132.5px;
+  box-shadow: 0px 4px 4px #00000040;
+  cursor: pointer;
+  height: 265px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 270px;
+}
+
+.frame1-home-mic .mic-1 {
+  height: 72px;
+  left: 97px;
+  object-fit: cover;
+  position: absolute;
+  top: 96px;
+  width: 76px;
+}
+
+.frame1-home-mic .line-7 {
+  height: 8px;
+  left: 0;
+  position: absolute;
+  top: 125px;
+  width: 571px;
+}
+
+.frame1-home-mic .line-8 {
+  height: 8px;
+  left: 841px;
+  position: absolute;
+  top: 125px;
+  width: 595px;
+}
+
+.frame1-home-mic .line-6 {
+  height: 380px;
+  left: 706px;
+  position: absolute;
+  top: 265px;
+  width: 9px;
+}
+
+.frame1-home-mic .ellipse-3 {
+  height: 137px;
+  left: 635px;
+  position: absolute;
+  top: 64px;
+  width: 143px;
+}
+
+.frame1-home-mic .sid-hello-usern {
+  -webkit-text-stroke: 4px var(--azure-radiance);
+  left: 181px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  text-align: center;
+  top: 557px;
+  width: 1085px;
+}
+
+.frame1-home-mic .overlap-group4 {
+  height: 145px;
+  left: 982px;
+  position: absolute;
+  top: 339px;
+  width: 320px;
+}
+
+.frame1-home-mic .files {
+  cursor: pointer;
+  left: 47px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  text-align: center;
+  top: 21px;
+  width: 226px;
+}
+
+.frame1-home-mic .overlap-group5 {
+  height: 152px;
+  left: 138px;
+  position: absolute;
+  top: 319px;
+  width: 320px;
+}
+
+.frame1-home-mic .schedule {
+  cursor: pointer;
+  left: 47px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  text-align: center;
+  top: 28px;
+  width: 226px;
+}

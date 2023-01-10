@@ -1,0 +1,97 @@
+:root { 
+  --alto: #d9d9d9;
+  --azure-radiance: #008efd;
+  --black: #000000;
+  --log-cabin: #222222;
+  --log-cabin-2: #222222bf;
+  --white: #ffffff;
+ 
+  --font-size-l: 16px;
+  --font-size-m: 11px;
+  --font-size-xl: 17px;
+  --font-size-xxl: 19px;
+  --font-size-xxxl: 21px;
+  --font-size-xxxxl: 22px;
+  --font-size-xxxxxl: 48px;
+ 
+  --font-family-inter: "Inter", Helvetica;
+}
+.inter-thin-black-16px {
+  color: var(--black);
+  font-family: var(--font-family-inter);
+  font-size: var(--font-size-l);
+  font-style: normal;
+  font-weight: 100;
+}
+
+.inter-bold-white-48px {
+  color: var(--white);
+  font-family: var(--font-family-inter);
+  font-size: var(--font-size-xxxxxl);
+  font-style: normal;
+  font-weight: 700;
+}
+
+.inter-bold-black-11px {
+  color: var(--black);
+  font-family: var(--font-family-inter);
+  font-size: var(--font-size-m);
+  font-style: normal;
+  font-weight: 700;
+}
+
+.inter-bold-black-17px {
+  color: var(--black);
+  font-family: var(--font-family-inter);
+  font-size: var(--font-size-xl);
+  font-style: normal;
+  font-weight: 700;
+}
+
+.inter-bold-white-19px {
+  color: var(--white);
+  font-family: var(--font-family-inter);
+  font-size: var(--font-size-xxl);
+  font-style: normal;
+  font-weight: 700;
+}
+
+.inter-bold-black-22px {
+  color: var(--black);
+  font-family: var(--font-family-inter);
+  font-size: var(--font-size-xxxxl);
+  font-style: normal;
+  font-weight: 700;
+}
+
+.inter-bold-black-16px {
+  color: var(--black);
+  font-family: var(--font-family-inter);
+  font-size: var(--font-size-l);
+  font-style: normal;
+  font-weight: 700;
+}
+
+.inter-bold-azure-radiance-36px {
+  color: var(--azure-radiance);
+  font-family: var(--font-family-inter);
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 700;
+}
+
+.inter-extra-light-azure-radiance-22px {
+  color: var(--azure-radiance);
+  font-family: var(--font-family-inter);
+  font-size: var(--font-size-xxxxl);
+  font-style: normal;
+  font-weight: 200;
+}
+
+.inter-thin-black-23px {
+  color: var(--black);
+  font-family: var(--font-family-inter);
+  font-size: 23px;
+  font-style: normal;
+  font-weight: 100;
+}
