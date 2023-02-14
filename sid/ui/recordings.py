@@ -23,7 +23,7 @@ class Ui_Recordings_2(object):
         if not Recordings_2.objectName():
             Recordings_2.setObjectName(u"Recordings_2")
         Recordings_2.resize(1105, 723)
-        Recordings_2.setStyleSheet("background-image: url(D:/D - Work/sid/images/blueHex.png)")
+        Recordings_2.setStyleSheet("background-image: url(images/blueHex.png)")
 
 
         self.Recordings = QFrame(Recordings_2)
