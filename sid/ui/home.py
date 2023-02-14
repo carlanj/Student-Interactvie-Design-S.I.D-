@@ -57,7 +57,7 @@ class Ui_MainWindow(object):
 
 #-------------------Window Design---------
         MainWindow.resize(776, 623)
-        MainWindow.setStyleSheet("background-image: url(D:/D - Work/sid/images/blueHex.png)")
+        MainWindow.setStyleSheet("background-image: url(images/blueHex.png)")
 
 
 
