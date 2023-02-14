@@ -48,8 +48,12 @@ class Ui_MainWindow(object):
         self.window.show()
 
 
+    def voiceControl(self):
+            pass
 
-
+        
+        
+        
 
     def setupUi(self, MainWindow):
         if not MainWindow.objectName():
@@ -118,9 +122,17 @@ class Ui_MainWindow(object):
         self.appButt = QPushButton(self.Home)
         self.appButt.setObjectName(u"appButt")
         self.appButt.setGeometry(QRect(310, 240, 71, 71))
+        
+        
+        #-------------------Microphone Button ---------
         self.micButt = QPushButton(self.Home)
         self.micButt.setObjectName(u"micButt")
         self.micButt.setGeometry(QRect(330, 260, 31, 31))
+        self.micButt.clicked.connect(self.voiceControl)
+
+        
+        
+        
         MainWindow.setCentralWidget(self.centralwidget)
         self.menubar = QMenuBar(MainWindow)
         self.menubar.setObjectName(u"menubar")
