@@ -27,7 +27,7 @@ class Ui_Recordings_2(object):
         Recordings_2.resize(1824, 917)
         self.frame = QFrame(Recordings_2)
         self.frame.setObjectName(u"frame")
-        self.frame.setGeometry(QRect(40, 40, 1471, 711))
+        self.frame.setGeometry(QRect(250, 40, 1471, 1011))
         self.frame.setStyleSheet(u"background-color: rgb(255, 255, 255);")
         self.frame.setFrameShape(QFrame.StyledPanel)
         self.frame.setFrameShadow(QFrame.Raised)
@@ -42,11 +42,31 @@ class Ui_Recordings_2(object):
         self.tree.setRootIndex(self.model.index(dir_path))
         self.tree.setColumnWidth(0, 250)
         self.tree.setAlternatingRowColors(True)
-        self.tree.setGeometry(QRect(155, 100, 1177, 711))
+        self.tree.setGeometry(QRect(0, 100, 1471, 1111))
 
         self.pushButton = QPushButton(self.frame)
         self.pushButton.setObjectName(u"pushButton")
-        self.pushButton.setGeometry(QRect(20, 10, 51, 41))
+        self.pushButton.setGeometry(QRect(20, 10, 61, 51))
+        self.pushButton.setStyleSheet(u"background-color: rgb(0, 0, 0);\n"
+"border-top-color: rgb(85, 255, 255);\n"
+"border-color: rgb(85, 255, 255);\n"
+"color: rgb(255, 255, 255);\n"
+"\n"
+"background-color: rgb(0, 0, 0);\n"
+"    border-radius: 120px;\n"
+"    border-style: outset;\n"
+"   border: 2px solid blue;\n"
+"    padding: 5px;"
+"font-size:35px;\n"
+"font-weight:800;")
+        backImage = QPixmap("C:/Student-Interactvie-Design-S.I.D-/sid/images/arrow.png")
+        backImage = backImage.scaled(QSize(32,32))
+        backPng = QIcon(backImage)
+        self.pushButton.setIcon(backPng)
+        
+
+
+
         self.pushButton_2 = QPushButton(self.frame)
         self.pushButton_2.setObjectName(u"pushButton_2")
         self.pushButton_2.setGeometry(QRect(1390, 10, 61, 41))
@@ -57,7 +77,7 @@ class Ui_Recordings_2(object):
         
         self.label_9 = QLabel(Recordings_2)
         self.label_9.setObjectName(u"label_9")
-        self.label_9.setGeometry(QRect(0, 0, 1821, 911))
+        self.label_9.setGeometry(QRect(0, 0, 3821, 2211))
         self.label_9.setStyleSheet(u"background-image: url(:/images/blueHex.png);")
         self.label_9.raise_()
         self.frame.raise_()
@@ -67,9 +87,15 @@ class Ui_Recordings_2(object):
         QMetaObject.connectSlotsByName(Recordings_2)
     # setupUi
 
+
+
+    
+
+
+
     def retranslateUi(self, Recordings_2):
         Recordings_2.setWindowTitle(QCoreApplication.translate("Recordings_2", u"Dialog", None))
-        self.pushButton.setText(QCoreApplication.translate("Recordings_2", u"<--", None))
+
         self.pushButton_2.setText(QCoreApplication.translate("Recordings_2", u"ADD", None))
         self.label.setText(QCoreApplication.translate("Recordings_2", u"Files", None))
       

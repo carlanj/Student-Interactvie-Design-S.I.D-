@@ -18,9 +18,25 @@ from PySide6.QtGui import (QBrush, QColor, QConicalGradient, QCursor,
 from PySide6.QtWidgets import (QApplication, QFrame, QLabel, QMainWindow,
     QMenuBar, QPushButton, QSizePolicy, QStatusBar,
     QWidget)
-from ui import rc_imagesQ, ui_files, ui_recordings, ui_reminders1, ui_home, ui_schedule, ui_scheduleTest
+from ui import rc_imagesQ, rc_mic, ui_files, ui_recordings, ui_reminders1, ui_home, ui_schedule, ui_scheduleTest
 import test
 class Ui_MainWindow(object):
+
+
+    def hider(self):
+        self.hide()
+
+    def goHome(self):
+        self.show()
+
+    def escQuit(self):
+        QApplication.quit()
+        
+
+    
+
+
+
     def setupUi(self, MainWindow):
         if not MainWindow.objectName():
             MainWindow.setObjectName(u"MainWindow")
@@ -45,11 +61,13 @@ class Ui_MainWindow(object):
 "font-size:35px;\n"
 "font-weight:800;")
         self.recButt.clicked.connect(self.openRecWindow)
+        self.recButt.clicked.connect(self.hider)
+
 
 
         self.remButt = QPushButton(MainWindow)
         self.remButt.setObjectName(u"remButt")
-        self.remButt.setGeometry(QRect(1050, 130, 216, 86))
+        self.remButt.setGeometry(QRect(1430, 130, 216, 86))
         self.remButt.setStyleSheet(u"background-color: rgb(0, 0, 0);\n"
 "border-top-color: rgb(85, 255, 255);\n"
 "border-color: rgb(85, 255, 255);\n"
@@ -63,11 +81,12 @@ class Ui_MainWindow(object):
 "font-size:35px;\n"
 "font-weight:800;")
         self.remButt.clicked.connect(self.openRemWindow)
+        self.remButt.clicked.connect(self.hider)
 
 
         self.filesButt = QPushButton(MainWindow)
         self.filesButt.setObjectName(u"filesButt")
-        self.filesButt.setGeometry(QRect(1050, 600, 216, 86))
+        self.filesButt.setGeometry(QRect(1430, 750, 216, 86))
         self.filesButt.setStyleSheet(u"background-color: rgb(0, 0, 0);\n"
 "border-top-color: rgb(85, 255, 255);\n"
 "border-color: rgb(85, 255, 255);\n"
@@ -81,11 +100,12 @@ class Ui_MainWindow(object):
 "font-size:35px;\n"
 "font-weight:800;")
         self.filesButt.clicked.connect(self.openFilesWindow)
+        self.filesButt.clicked.connect(self.hider)
 
 
         self.schedButt = QPushButton(MainWindow)
         self.schedButt.setObjectName(u"schedButt")
-        self.schedButt.setGeometry(QRect(310, 600, 216, 86))
+        self.schedButt.setGeometry(QRect(310, 750, 216, 86))
         self.schedButt.setStyleSheet(u"background-color: rgb(0, 0, 0);\n"
 "border-top-color: rgb(85, 255, 255);\n"
 "border-color: rgb(85, 255, 255);\n"
@@ -99,11 +119,12 @@ class Ui_MainWindow(object):
 "font-size:35px;\n"
 "font-weight:800;")
         self.schedButt.clicked.connect(self.openSchedWindow)
+        self.schedButt.clicked.connect(self.hider)
 
 
         self.hMidLine = QFrame(MainWindow)
         self.hMidLine.setObjectName(u"hMidLine")
-        self.hMidLine.setGeometry(QRect(770, 0, 20, 1211))
+        self.hMidLine.setGeometry(QRect(970, 0, 20, 1211))
         self.hMidLine.setStyleSheet(u"background-color: rgb(0, 0, 0);\n"
 " border: 2px solid blue;\n"
 "    border-radius: 60px;\n"
@@ -129,7 +150,7 @@ class Ui_MainWindow(object):
 
         self.vMidLine = QFrame(MainWindow)
         self.vMidLine.setObjectName(u"vMidLine")
-        self.vMidLine.setGeometry(QRect(0, 400, 1961, 20))
+        self.vMidLine.setGeometry(QRect(0, 500, 1961, 20))
         self.vMidLine.setAutoFillBackground(False)
         self.vMidLine.setStyleSheet(u"background-color: rgb(255, 255, 255);\n"
 " border: 2px solid blue;\n"
@@ -147,7 +168,7 @@ class Ui_MainWindow(object):
 
         self.appButt = QPushButton(MainWindow)
         self.appButt.setObjectName(u"appButt")
-        self.appButt.setGeometry(QRect(655, 280, 251, 261))
+        self.appButt.setGeometry(QRect(855, 380, 251, 261))
         self.appButt.setStyleSheet(u" color: #333;\n"
 "color: rgb(0, 0, 0);\n"
 "background-color: rgb(0, 0, 0);\n"
@@ -159,24 +180,18 @@ class Ui_MainWindow(object):
 
         self.micButt = QPushButton(MainWindow)
         self.micButt.setObjectName(u"micButt")
-        self.micButt.setGeometry(QRect(715, 340, 131, 151))
-        self.micButt.setStyleSheet(u"color: #333;\n"
-"    border: 2px solid blue;\n"
-"    border-radius: 60px;\n"
-"    border-style: outset;\n"
-"  \n"
-"    padding: 5px;\n"
-"   border: 2px solid blue;\n"
-"    padding: 5px;")
+        self.micButt.setGeometry(QRect(915, 440, 130, 140))
+
+        self.micButt.setStyleSheet(u"background-image: url(:/newPrefix/sid/images/mic.png);")
 
         self.label = QLabel(self.centralwidget)
         self.label.setObjectName(u"label")
-        self.label.setGeometry(QRect(0, -1000, 2000, 2000))
-        self.label.setAutoFillBackground(False)
-
+        self.label.setGeometry(QRect(0, 0, 3821, 2211))
         self.label.setStyleSheet(u"background-image: url(:/images/blueHex.png);")
-        MainWindow.setCentralWidget(self.centralwidget)
         self.label.raise_()
+
+        
+        MainWindow.setCentralWidget(self.centralwidget)
       
         self.menubar = QMenuBar(MainWindow)
         self.menubar.setObjectName(u"menubar")
@@ -191,35 +206,58 @@ class Ui_MainWindow(object):
         QMetaObject.connectSlotsByName(MainWindow)
     # setupUi
 
-
+        self.window_list=[]
 
     def openRecWindow(self):
         self.window = QMainWindow()
         self.ui = ui_recordings.Ui_Recordings_2()
         self.ui.setupUi(self.window)
+        self.window_list.append(self.window) 
         self.window.show()
-
+        self.ui.pushButton.clicked.connect(self.close_last_window)
+        self.ui.pushButton.clicked.connect(self.goHome)
+        self.window.setWindowState(Qt.WindowFullScreen)
 
     def openRemWindow(self):
         self.window = QMainWindow()
         self.ui = ui_reminders1.Ui_Recordings_2()
         self.ui.setupUi(self.window)
+        self.window_list.append(self.window) 
         self.window.show()
+        self.ui.pushButton.clicked.connect(self.close_last_window)
+        self.ui.pushButton.clicked.connect(self.goHome)
+        self.window.setWindowState(Qt.WindowFullScreen)
 
 
     def openFilesWindow(self):
         self.window = QMainWindow()
         self.ui = ui_files.Ui_Recordings_2()
         self.ui.setupUi(self.window)
+        self.window_list.append(self.window) 
         self.window.show()
+        self.ui.pushButton.clicked.connect(self.close_last_window)
+        self.ui.pushButton.clicked.connect(self.goHome)
+        self.window.setWindowState(Qt.WindowFullScreen)
 
 
     def openSchedWindow(self):
         self.window = QMainWindow()
         self.ui = ui_schedule.Ui_Recordings_2()
         self.ui.setupUi(self.window)
+        self.window_list.append(self.window) 
         self.window.show()
+        self.ui.pushButton.clicked.connect(self.close_last_window)
+        self.ui.pushButton.clicked.connect(self.goHome)
+        self.window.setWindowState(Qt.WindowFullScreen)
 
+
+
+
+    
+    def close_last_window(self):
+        last_window=self.window_list[-1]
+        self.window_list.remove(last_window)
+        last_window.close()
 
 
 
@@ -233,7 +271,7 @@ class Ui_MainWindow(object):
         self.filesButt.setText(QCoreApplication.translate("MainWindow", u"Files", None))
         self.schedButt.setText(QCoreApplication.translate("MainWindow", u"Schedule ", None))
         self.appButt.setText(QCoreApplication.translate("MainWindow", u"APPS", None))
-        self.micButt.setText(QCoreApplication.translate("MainWindow", u"MIC", None))
+        self.micButt.setText(QCoreApplication.translate("MainWindow", u"", None))
         self.label.setText("")
     # retranslateUi
 
