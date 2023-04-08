@@ -45,9 +45,10 @@ class Ui_MainWindow(object):
         self.centralwidget = QWidget(MainWindow)
         self.centralwidget.setObjectName(u"centralwidget")
 
+
         self.appFrame = QFrame(MainWindow)
         self.appFrame.setObjectName(u"appFrame")
-        self.appFrame.setGeometry(QRect(855, 380, 251, 261))
+        self.appFrame.setGeometry(QRect(755, 380, 251, 261))
         self.appFrame.setStyleSheet(u" color: #333;\n"
 "color: rgb(0, 0, 0);\n"
 "background-color: rgb(0, 0, 0);\n"
@@ -59,7 +60,7 @@ class Ui_MainWindow(object):
 
         self.recordButton = QPushButton(MainWindow)
         self.recordButton.setObjectName(u"recordButton")
-        self.recordButton.setGeometry(QRect(935, 410, 86, 46))
+        self.recordButton.setGeometry(QRect(835, 410, 86, 46))
         self.recordButton.setStyleSheet(u"background-color: rgb(0, 0, 0);\n"
 "border-top-color: rgb(85, 255, 255);\n"
 "border-color: rgb(85, 255, 255);\n"
@@ -77,7 +78,7 @@ class Ui_MainWindow(object):
 
         self.micButton = QPushButton(MainWindow)
         self.micButton.setObjectName(u"micButton")
-        self.micButton.setGeometry(QRect(935, 490, 86, 46))
+        self.micButton.setGeometry(QRect(835, 490, 86, 46))
         self.micButton.setStyleSheet(u"background-color: rgb(0, 0, 0);\n"
 "border-top-color: rgb(85, 255, 255);\n"
 "border-color: rgb(85, 255, 255);\n"
@@ -91,7 +92,7 @@ class Ui_MainWindow(object):
 "font-size:25px;\n"
 "font-weight:800;")
         self.micButton.raise_()
-        micImage = QPixmap("sid/images/mic.png")
+        micImage = QPixmap(r"sid/images/mic.png")
         micImage = micImage.scaled(QSize(32,32))
         micPng = QIcon(micImage)
         self.micButton.setIcon(micPng)
@@ -99,7 +100,7 @@ class Ui_MainWindow(object):
 
         self.appsButton = QPushButton(MainWindow)
         self.appsButton.setObjectName(u"appsButton")
-        self.appsButton.setGeometry(QRect(935, 570, 86, 46))
+        self.appsButton.setGeometry(QRect(835, 570, 86, 46))
         self.appsButton.setStyleSheet(u"background-color: rgb(0, 0, 0);\n"
 "border-top-color: rgb(85, 255, 255);\n"
 "border-color: rgb(85, 255, 255);\n"
@@ -135,7 +136,7 @@ class Ui_MainWindow(object):
 
         self.remButt = QPushButton(MainWindow)
         self.remButt.setObjectName(u"remButt")
-        self.remButt.setGeometry(QRect(1430, 130, 216, 86))
+        self.remButt.setGeometry(QRect(1230, 130, 216, 86))
         self.remButt.setStyleSheet(u"background-color: rgb(0, 0, 0);\n"
 "border-top-color: rgb(85, 255, 255);\n"
 "border-color: rgb(85, 255, 255);\n"
@@ -154,7 +155,7 @@ class Ui_MainWindow(object):
 
         self.filesButt = QPushButton(MainWindow)
         self.filesButt.setObjectName(u"filesButt")
-        self.filesButt.setGeometry(QRect(1430, 750, 216, 86))
+        self.filesButt.setGeometry(QRect(1230, 750, 216, 86))
         self.filesButt.setStyleSheet(u"background-color: rgb(0, 0, 0);\n"
 "border-top-color: rgb(85, 255, 255);\n"
 "border-color: rgb(85, 255, 255);\n"
@@ -190,64 +191,21 @@ class Ui_MainWindow(object):
         self.schedButt.clicked.connect(self.hider)
 
 
-        self.hMidLine = QFrame(MainWindow)
-        self.hMidLine.setObjectName(u"hMidLine")
-        self.hMidLine.setGeometry(QRect(970, 0, 20, 380))
-        self.hMidLine.setStyleSheet(u"background-color: rgb(0, 0, 0);\n"
-" border: 2px solid blue;\n"
-"    border-radius: 60px;\n"
-"    border-style: outset;\n"
-"  \n"
-"    padding: 5px;\n"
-"background-color: rgb(0, 0, 0);\n"
-"   border: 2px solid blue;\n"
-"    padding: 5px;")
-        self.hMidLine.setLineWidth(10)
-        self.hMidLine.setFrameShape(QFrame.VLine)
-        self.hMidLine.setFrameShadow(QFrame.Sunken)
-        self.hMidLine.setStyleSheet(u"background-color: rgb(255, 255, 255);\n"
-" border: 2px solid blue;\n"
-"    border-radius: 60px;\n"
-"    border-style: outset;\n"
-"  \n"
-"    padding: 5px;\n"
-"background-color: rgb(255, 255, 255);\n"
-"   border: 2px solid blue;\n"
-"    padding: 5px;")
-
-
-
-        self.hMidLine2 = QFrame(MainWindow)
-        self.hMidLine2.setObjectName(u"hMidLine2")
-        self.hMidLine2.setGeometry(QRect(970, 650, 20, 675))
-        self.hMidLine2.setStyleSheet(u"background-color: rgb(0, 0, 0);\n"
-" border: 2px solid blue;\n"
-"    border-radius: 60px;\n"
-"    border-style: outset;\n"
-"  \n"
-"    padding: 5px;\n"
-"background-color: rgb(0, 0, 0);\n"
-"   border: 2px solid blue;\n"
-"    padding: 5px;")
-        self.hMidLine2.setLineWidth(10)
-        self.hMidLine2.setFrameShape(QFrame.VLine)
-        self.hMidLine2.setFrameShadow(QFrame.Sunken)
-        self.hMidLine2.setStyleSheet(u"background-color: rgb(255, 255, 255);\n"
-" border: 2px solid blue;\n"
-"    border-radius: 60px;\n"
-"    border-style: outset;\n"
-"  \n"
-"    padding: 5px;\n"
-"background-color: rgb(255, 255, 255);\n"
-"   border: 2px solid blue;\n"
-"    padding: 5px;")
-
-
-
         self.vMidLine = QFrame(MainWindow)
-        self.vMidLine.setObjectName(u"vMidLine")
-        self.vMidLine.setGeometry(QRect(10, 500, 850, 20))
-        self.vMidLine.setAutoFillBackground(False)
+        self.vMidLine.setObjectName(u"leftMidLine")
+        self.vMidLine.setGeometry(QRect(870, 0, 20, 380))
+        self.vMidLine.setStyleSheet(u"background-color: rgb(0, 0, 0);\n"
+" border: 2px solid blue;\n"
+"    border-radius: 60px;\n"
+"    border-style: outset;\n"
+"  \n"
+"    padding: 5px;\n"
+"background-color: rgb(0, 0, 0);\n"
+"   border: 2px solid blue;\n"
+"    padding: 5px;")
+        self.vMidLine.setLineWidth(10)
+        self.vMidLine.setFrameShape(QFrame.VLine)
+        self.vMidLine.setFrameShadow(QFrame.Sunken)
         self.vMidLine.setStyleSheet(u"background-color: rgb(255, 255, 255);\n"
 " border: 2px solid blue;\n"
 "    border-radius: 60px;\n"
@@ -257,19 +215,24 @@ class Ui_MainWindow(object):
 "background-color: rgb(255, 255, 255);\n"
 "   border: 2px solid blue;\n"
 "    padding: 5px;")
-        self.vMidLine.setLineWidth(10)
-        self.vMidLine.setMidLineWidth(0)
-        self.vMidLine.setFrameShape(QFrame.HLine)
-        self.vMidLine.setFrameShadow(QFrame.Sunken)
-
-
 
 
 
         self.vMidLine2 = QFrame(MainWindow)
         self.vMidLine2.setObjectName(u"vMidLine2")
-        self.vMidLine2.setGeometry(QRect(1100, 500, 850, 20))
-        self.vMidLine2.setAutoFillBackground(False)
+        self.vMidLine2.setGeometry(QRect(870, 650, 20, 675))
+        self.vMidLine2.setStyleSheet(u"background-color: rgb(0, 0, 0);\n"
+" border: 2px solid blue;\n"
+"    border-radius: 60px;\n"
+"    border-style: outset;\n"
+"  \n"
+"    padding: 5px;\n"
+"background-color: rgb(0, 0, 0);\n"
+"   border: 2px solid blue;\n"
+"    padding: 5px;")
+        self.vMidLine2.setLineWidth(10)
+        self.vMidLine2.setFrameShape(QFrame.VLine)
+        self.vMidLine2.setFrameShadow(QFrame.Sunken)
         self.vMidLine2.setStyleSheet(u"background-color: rgb(255, 255, 255);\n"
 " border: 2px solid blue;\n"
 "    border-radius: 60px;\n"
@@ -279,10 +242,48 @@ class Ui_MainWindow(object):
 "background-color: rgb(255, 255, 255);\n"
 "   border: 2px solid blue;\n"
 "    padding: 5px;")
-        self.vMidLine2.setLineWidth(10)
-        self.vMidLine2.setMidLineWidth(0)
-        self.vMidLine2.setFrameShape(QFrame.HLine)
-        self.vMidLine2.setFrameShadow(QFrame.Sunken)
+
+
+
+        self.leftMidLine = QFrame(MainWindow)
+        self.leftMidLine.setObjectName(u"leftMidLine")
+        self.leftMidLine.setGeometry(QRect(10, 500, 750, 20))
+        self.leftMidLine.setAutoFillBackground(False)
+        self.leftMidLine.setStyleSheet(u"background-color: rgb(255, 255, 255);\n"
+" border: 2px solid blue;\n"
+"    border-radius: 60px;\n"
+"    border-style: outset;\n"
+"  \n"
+"    padding: 5px;\n"
+"background-color: rgb(255, 255, 255);\n"
+"   border: 2px solid blue;\n"
+"    padding: 5px;")
+        self.leftMidLine.setLineWidth(10)
+        self.leftMidLine.setMidLineWidth(0)
+        self.leftMidLine.setFrameShape(QFrame.HLine)
+        self.leftMidLine.setFrameShadow(QFrame.Sunken)
+
+
+
+
+
+        self.rightMidLine = QFrame(MainWindow)
+        self.rightMidLine.setObjectName(u"rightMidLine")
+        self.rightMidLine.setGeometry(QRect(1000, 500, 850, 20))
+        self.rightMidLine.setAutoFillBackground(False)
+        self.rightMidLine.setStyleSheet(u"background-color: rgb(255\, 255, 255);\n"
+" border: 2px solid blue;\n"
+"    border-radius: 60px;\n"
+"    border-style: outset;\n"
+"  \n"
+"    padding: 5px;\n"
+"background-color: rgb(255, 255, 255);\n"
+"   border: 2px solid blue;\n"
+"    padding: 5px;")
+        self.rightMidLine.setLineWidth(10)
+        self.rightMidLine.setMidLineWidth(0)
+        self.rightMidLine.setFrameShape(QFrame.HLine)
+        self.rightMidLine.setFrameShadow(QFrame.Sunken)
 
     
 
