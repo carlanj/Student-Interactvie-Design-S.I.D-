@@ -27,12 +27,12 @@ class Ui_Recordings_2(object):
         Recordings_2.resize(1824, 917)
         self.frame = QFrame(Recordings_2)
         self.frame.setObjectName(u"frame")
-        self.frame.setGeometry(QRect(250, 40, 1471, 1011))
-        self.frame.setStyleSheet(u"background-color: rgb(255, 255, 255);")
+        self.frame.setGeometry(QRect(250, 40, 1471, 1050))
+        self.frame.setStyleSheet(u"background-color: rgb(255, 255, 255);border-radius: 50px;")
         self.frame.setFrameShape(QFrame.StyledPanel)
         self.frame.setFrameShadow(QFrame.Raised)
 
-        dir_path =r'C:'
+        dir_path =r'sid/sidSaved'
 
         self.model = QFileSystemModel(self.frame)
         self.model.setRootPath(dir_path)
@@ -59,22 +59,85 @@ class Ui_Recordings_2(object):
 "    padding: 5px;"
 "font-size:35px;\n"
 "font-weight:800;")
-        backImage = QPixmap("C:/Student-Interactvie-Design-S.I.D-/sid/images/arrow.png")
+        backImage = QPixmap("sid/images/arrow.png")
         backImage = backImage.scaled(QSize(32,32))
         backPng = QIcon(backImage)
         self.pushButton.setIcon(backPng)
         
 
-
-
         self.pushButton_2 = QPushButton(self.frame)
         self.pushButton_2.setObjectName(u"pushButton_2")
-        self.pushButton_2.setGeometry(QRect(1390, 10, 61, 41))
+        self.pushButton_2.setGeometry(QRect(130, 10, 61, 51))
+        self.pushButton_2.setStyleSheet(u"background-color: rgb(0, 0, 0);\n"
+"border-top-color: rgb(85, 255, 255);\n"
+"border-color: rgb(85, 255, 255);\n"
+"color: rgb(255, 255, 255);\n"
+"\n"
+"background-color: rgb(0, 0, 0);\n"
+"    border-radius: 120px;\n"
+"    border-style: outset;\n"
+"   border: 2px solid blue;\n"
+"    padding: 5px;"
+"font-size:35px;\n"
+"font-weight:800;")
+        addImage = QPixmap("sid/images/add.png")
+        addImage = addImage.scaled(QSize(32,32))
+        addPng = QIcon(addImage)
+        self.pushButton_2.setIcon(addPng)
+
+
+        self.trashButton = QPushButton(self.frame)
+        self.trashButton.setObjectName(u"trashButton")
+        self.trashButton.setGeometry(QRect(240, 10, 61, 51))
+        self.trashButton.setStyleSheet(u"background-color: rgb(0, 0, 0);\n"
+"border-top-color: rgb(85, 255, 255);\n"
+"border-color: rgb(85, 255, 255);\n"
+"color: rgb(255, 255, 255);\n"
+"\n"
+"background-color: rgb(0, 0, 0);\n"
+"    border-radius: 120px;\n"
+"    border-style: outset;\n"
+"   border: 2px solid blue;\n"
+"    padding: 5px;"
+"font-size:35px;\n"
+"font-weight:800;")
+        trashImage = QPixmap("sid/images/trash.png")
+        trashImage = trashImage.scaled(QSize(32,32))
+        trashPng = QIcon(trashImage)
+        self.trashButton.setIcon(trashPng)
+
+
+        self.sortButton = QPushButton(self.frame)
+        self.sortButton.setObjectName(u"sortButton")
+        self.sortButton.setGeometry(QRect(350, 10, 61, 51))
+        self.sortButton.setStyleSheet(u"background-color: rgb(0, 0, 255);\n"
+"border-top-color: rgb(85, 255, 255);\n"
+"border-color: rgb(85, 255, 255);\n"
+"color: rgb(255, 255, 255);\n"
+"\n"
+"background-color: rgb(0, 0, 0);\n"
+"    border-radius: 120px;\n"
+"    border-style: outset;\n"
+"   border: 2px solid blue;\n"
+"    padding: 5px;"
+"font-size:15px;\n"
+"font-weight:800;")
+
+
+
+
+
+
+
         self.label = QLabel(self.frame)
         self.label.setObjectName(u"label")
         self.label.setGeometry(QRect(680, 10, 131, 20))
+        self.label.setGeometry(QRect(670, -10, 381, 100))
+        self.label.setStyleSheet("font-size: 60px; color: blue;")
+
 
         
+
         self.label_9 = QLabel(Recordings_2)
         self.label_9.setObjectName(u"label_9")
         self.label_9.setGeometry(QRect(0, 0, 3821, 2211))
@@ -95,9 +158,8 @@ class Ui_Recordings_2(object):
 
     def retranslateUi(self, Recordings_2):
         Recordings_2.setWindowTitle(QCoreApplication.translate("Recordings_2", u"Dialog", None))
-
-        self.pushButton_2.setText(QCoreApplication.translate("Recordings_2", u"ADD", None))
         self.label.setText(QCoreApplication.translate("Recordings_2", u"Files", None))
+        self.sortButton.setText(QCoreApplication.translate("Recordings_2", u"Sort", None))
       
         self.label_9.setText("")
     # retranslateUi

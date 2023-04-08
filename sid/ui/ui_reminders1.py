@@ -27,8 +27,8 @@ class Ui_Recordings_2(object):
         Recordings_2.resize(1824, 917)
         self.frame = QFrame(Recordings_2)
         self.frame.setObjectName(u"frame")
-        self.frame.setGeometry(QRect(250, 40, 1471, 1011))
-        self.frame.setStyleSheet(u"background-color: rgb(255, 255, 255);")
+        self.frame.setGeometry(QRect(250, 40, 1471, 1050))
+        self.frame.setStyleSheet(u"background-color: rgb(255, 255, 255);border-radius: 50px;")
         self.frame.setFrameShape(QFrame.StyledPanel)
         self.frame.setFrameShadow(QFrame.Raised)
 
@@ -47,7 +47,7 @@ class Ui_Recordings_2(object):
 "    padding: 5px;"
 "font-size:35px;\n"
 "font-weight:800;")
-        backImage = QPixmap("C:/Student-Interactvie-Design-S.I.D-/sid/images/arrow.png")
+        backImage = QPixmap("sid/images/arrow.png")
         backImage = backImage.scaled(QSize(32,32))
         backPng = QIcon(backImage)
         self.pushButton.setIcon(backPng)
@@ -55,9 +55,28 @@ class Ui_Recordings_2(object):
         self.pushButton_2 = QPushButton(self.frame)
         self.pushButton_2.setObjectName(u"pushButton_2")
         self.pushButton_2.setGeometry(QRect(1390, 10, 61, 41))
+        self.pushButton_2.setStyleSheet(u"background-color: rgb(0, 0, 0);\n"
+"border-top-color: rgb(85, 255, 255);\n"
+"border-color: rgb(85, 255, 255);\n"
+"color: rgb(255, 255, 255);\n"
+"\n"
+"background-color: rgb(0, 0, 0);\n"
+"    border-radius: 120px;\n"
+"    border-style: outset;\n"
+"   border: 2px solid blue;\n"
+"    padding: 5px;"
+"font-size:35px;\n"
+"font-weight:800;")
+        addImage = QPixmap("sid/images/add.png")
+        addImage = addImage.scaled(QSize(32,32))
+        addPng = QIcon(addImage)
+        self.pushButton_2.setIcon(addPng)
+
         self.label = QLabel(self.frame)
         self.label.setObjectName(u"label")
-        self.label.setGeometry(QRect(710, 10, 131, 20))
+        self.label.setGeometry(QRect(570, -10, 381, 100))
+        self.label.setStyleSheet("font-size: 60px; color: blue;")
+
         self.line_2 = QFrame(self.frame)
         self.line_2.setObjectName(u"line_2")
         self.line_2.setGeometry(QRect(-30, 90, 1491, 20))
@@ -75,7 +94,7 @@ class Ui_Recordings_2(object):
         
 
         self.tableWidget.setObjectName(u"tableWidget")
-        self.tableWidget.setGeometry(QRect(0, 100, 1471, 1111))
+        self.tableWidget.setGeometry(QRect(0, 100, 1471, 1010))
         self.tableWidget.setMinimumSize(QSize(1471, 0))
         self.label_9 = QLabel(Recordings_2)
         self.label_9.setObjectName(u"label_9")
@@ -92,7 +111,6 @@ class Ui_Recordings_2(object):
     def retranslateUi(self, Recordings_2):
         Recordings_2.setWindowTitle(QCoreApplication.translate("Recordings_2", u"Dialog", None))
 
-        self.pushButton_2.setText(QCoreApplication.translate("Recordings_2", u"ADD", None))
         self.label.setText(QCoreApplication.translate("Recordings_2", u"Reminders", None))
         ___qtablewidgetitem = self.tableWidget.horizontalHeaderItem(0)
         ___qtablewidgetitem.setText(QCoreApplication.translate("Recordings_2", u"TO-DO", None));

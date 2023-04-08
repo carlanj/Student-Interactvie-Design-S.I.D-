@@ -45,9 +45,77 @@ class Ui_MainWindow(object):
         self.centralwidget = QWidget(MainWindow)
         self.centralwidget.setObjectName(u"centralwidget")
 
+        self.appFrame = QFrame(MainWindow)
+        self.appFrame.setObjectName(u"appFrame")
+        self.appFrame.setGeometry(QRect(855, 380, 251, 261))
+        self.appFrame.setStyleSheet(u" color: #333;\n"
+"color: rgb(0, 0, 0);\n"
+"background-color: rgb(0, 0, 0);\n"
+"    border-radius: 120px;\n"
+"    border-style: outset;\n"
+"   border: 2px solid white;\n"
+"    padding: 5px;\n"
+"")
+
+        self.recordButton = QPushButton(MainWindow)
+        self.recordButton.setObjectName(u"recordButton")
+        self.recordButton.setGeometry(QRect(935, 410, 86, 46))
+        self.recordButton.setStyleSheet(u"background-color: rgb(0, 0, 0);\n"
+"border-top-color: rgb(85, 255, 255);\n"
+"border-color: rgb(85, 255, 255);\n"
+"color: rgb(255, 255, 255);\n"
+"\n"
+"background-color: rgb(0, 0, 0);\n"
+"    border-radius: 120px;\n"
+"    border-style: outset;\n"
+"   border: 2px solid blue;\n"
+"    padding: 5px;"
+"font-size:25px;\n"
+"font-weight:800;")
+        self.recordButton.raise_()
 
 
-        
+        self.micButton = QPushButton(MainWindow)
+        self.micButton.setObjectName(u"micButton")
+        self.micButton.setGeometry(QRect(935, 490, 86, 46))
+        self.micButton.setStyleSheet(u"background-color: rgb(0, 0, 0);\n"
+"border-top-color: rgb(85, 255, 255);\n"
+"border-color: rgb(85, 255, 255);\n"
+"color: rgb(255, 255, 255);\n"
+"\n"
+"background-color: rgb(0, 0, 0);\n"
+"    border-radius: 120px;\n"
+"    border-style: outset;\n"
+"   border: 2px solid blue;\n"
+"    padding: 5px;"
+"font-size:25px;\n"
+"font-weight:800;")
+        self.micButton.raise_()
+        micImage = QPixmap("sid/images/mic.png")
+        micImage = micImage.scaled(QSize(32,32))
+        micPng = QIcon(micImage)
+        self.micButton.setIcon(micPng)
+
+
+        self.appsButton = QPushButton(MainWindow)
+        self.appsButton.setObjectName(u"appsButton")
+        self.appsButton.setGeometry(QRect(935, 570, 86, 46))
+        self.appsButton.setStyleSheet(u"background-color: rgb(0, 0, 0);\n"
+"border-top-color: rgb(85, 255, 255);\n"
+"border-color: rgb(85, 255, 255);\n"
+"color: rgb(255, 255, 255);\n"
+"\n"
+"background-color: rgb(0, 0, 0);\n"
+"    border-radius: 120px;\n"
+"    border-style: outset;\n"
+"   border: 2px solid blue;\n"
+"    padding: 5px;"
+"font-size:25px;\n"
+"font-weight:800;")
+        self.appsButton.raise_()
+
+
+
         self.recButt = QPushButton(MainWindow)
         self.recButt.setObjectName(u"recButt")
         self.recButt.setGeometry(QRect(310, 130, 216, 86))
@@ -58,7 +126,7 @@ class Ui_MainWindow(object):
 "   border: 2px solid blue;\n"
 "    padding: 5px;\n"
 "color: rgb(255, 255, 255);\n"
-"font-size:35px;\n"
+"font-size:25px;\n"
 "font-weight:800;")
         self.recButt.clicked.connect(self.openRecWindow)
         self.recButt.clicked.connect(self.hider)
@@ -124,7 +192,7 @@ class Ui_MainWindow(object):
 
         self.hMidLine = QFrame(MainWindow)
         self.hMidLine.setObjectName(u"hMidLine")
-        self.hMidLine.setGeometry(QRect(970, 0, 20, 1211))
+        self.hMidLine.setGeometry(QRect(970, 0, 20, 380))
         self.hMidLine.setStyleSheet(u"background-color: rgb(0, 0, 0);\n"
 " border: 2px solid blue;\n"
 "    border-radius: 60px;\n"
@@ -148,9 +216,37 @@ class Ui_MainWindow(object):
 "    padding: 5px;")
 
 
+
+        self.hMidLine2 = QFrame(MainWindow)
+        self.hMidLine2.setObjectName(u"hMidLine2")
+        self.hMidLine2.setGeometry(QRect(970, 650, 20, 675))
+        self.hMidLine2.setStyleSheet(u"background-color: rgb(0, 0, 0);\n"
+" border: 2px solid blue;\n"
+"    border-radius: 60px;\n"
+"    border-style: outset;\n"
+"  \n"
+"    padding: 5px;\n"
+"background-color: rgb(0, 0, 0);\n"
+"   border: 2px solid blue;\n"
+"    padding: 5px;")
+        self.hMidLine2.setLineWidth(10)
+        self.hMidLine2.setFrameShape(QFrame.VLine)
+        self.hMidLine2.setFrameShadow(QFrame.Sunken)
+        self.hMidLine2.setStyleSheet(u"background-color: rgb(255, 255, 255);\n"
+" border: 2px solid blue;\n"
+"    border-radius: 60px;\n"
+"    border-style: outset;\n"
+"  \n"
+"    padding: 5px;\n"
+"background-color: rgb(255, 255, 255);\n"
+"   border: 2px solid blue;\n"
+"    padding: 5px;")
+
+
+
         self.vMidLine = QFrame(MainWindow)
         self.vMidLine.setObjectName(u"vMidLine")
-        self.vMidLine.setGeometry(QRect(0, 500, 1961, 20))
+        self.vMidLine.setGeometry(QRect(10, 500, 850, 20))
         self.vMidLine.setAutoFillBackground(False)
         self.vMidLine.setStyleSheet(u"background-color: rgb(255, 255, 255);\n"
 " border: 2px solid blue;\n"
@@ -166,23 +262,29 @@ class Ui_MainWindow(object):
         self.vMidLine.setFrameShape(QFrame.HLine)
         self.vMidLine.setFrameShadow(QFrame.Sunken)
 
-        self.appButt = QPushButton(MainWindow)
-        self.appButt.setObjectName(u"appButt")
-        self.appButt.setGeometry(QRect(855, 380, 251, 261))
-        self.appButt.setStyleSheet(u" color: #333;\n"
-"color: rgb(0, 0, 0);\n"
-"background-color: rgb(0, 0, 0);\n"
-"    border-radius: 120px;\n"
+
+
+
+
+        self.vMidLine2 = QFrame(MainWindow)
+        self.vMidLine2.setObjectName(u"vMidLine2")
+        self.vMidLine2.setGeometry(QRect(1100, 500, 850, 20))
+        self.vMidLine2.setAutoFillBackground(False)
+        self.vMidLine2.setStyleSheet(u"background-color: rgb(255, 255, 255);\n"
+" border: 2px solid blue;\n"
+"    border-radius: 60px;\n"
 "    border-style: outset;\n"
-"   border: 2px solid white;\n"
+"  \n"
 "    padding: 5px;\n"
-"")
+"background-color: rgb(255, 255, 255);\n"
+"   border: 2px solid blue;\n"
+"    padding: 5px;")
+        self.vMidLine2.setLineWidth(10)
+        self.vMidLine2.setMidLineWidth(0)
+        self.vMidLine2.setFrameShape(QFrame.HLine)
+        self.vMidLine2.setFrameShadow(QFrame.Sunken)
 
-        self.micButt = QPushButton(MainWindow)
-        self.micButt.setObjectName(u"micButt")
-        self.micButt.setGeometry(QRect(915, 440, 130, 140))
-
-        self.micButt.setStyleSheet(u"background-image: url(:/newPrefix/sid/images/mic.png);")
+    
 
         self.label = QLabel(self.centralwidget)
         self.label.setObjectName(u"label")
@@ -270,8 +372,9 @@ class Ui_MainWindow(object):
         self.remButt.setText(QCoreApplication.translate("MainWindow", u"Reminders", None))
         self.filesButt.setText(QCoreApplication.translate("MainWindow", u"Files", None))
         self.schedButt.setText(QCoreApplication.translate("MainWindow", u"Schedule ", None))
-        self.appButt.setText(QCoreApplication.translate("MainWindow", u"APPS", None))
-        self.micButt.setText(QCoreApplication.translate("MainWindow", u"", None))
-        self.label.setText("")
+        self.recordButton.setText(QCoreApplication.translate("MainWindow", u"REC", None))
+        self.appsButton.setText(QCoreApplication.translate("MainWindow", u"APPS", None))
+
+
     # retranslateUi
 

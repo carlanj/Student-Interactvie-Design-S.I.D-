@@ -12,6 +12,7 @@ class Home(ui_home.Ui_MainWindow, QtWidgets.QMainWindow):
         self.window_list=[]
         self.setWindowState(Qt.WindowFullScreen)
 
+
         escButt = QShortcut(QKeySequence(Qt.Key_Escape), self)
         escButt.activated.connect(self.escQuit)
 
