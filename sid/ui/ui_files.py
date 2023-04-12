@@ -9,30 +9,68 @@
 ################################################################################
 
 from PySide6.QtCore import (QCoreApplication, QDate, QDateTime, QLocale,
-    QMetaObject, QObject, QPoint, QRect,
+    QMetaObject, QObject, QPoint, QRect,QDir,QSortFilterProxyModel,
     QSize, QTime, QUrl, Qt)
 from PySide6.QtGui import (QBrush, QColor, QConicalGradient, QCursor,
     QFont, QFontDatabase, QGradient, QIcon,
     QImage, QKeySequence, QLinearGradient, QPainter,
     QPalette, QPixmap, QRadialGradient, QTransform)
 from PySide6.QtWidgets import (QApplication, QDialog, QFrame, QHeaderView,
-    QLabel, QPushButton, QSizePolicy, QTableWidget,
+    QLabel, QPushButton, QSizePolicy, QTableWidget,QFileDialog,
     QTableWidgetItem, QWidget,QFileSystemModel,QTreeView)
 from ui import rc_imagesQ
 from PyQt6 import QtCore, QtGui, QtWidgets
+import os 
+import datetime
+import time
+import arrow
+import random
 class Ui_Recordings_2(object):
+
+    def sorter(self):
+        proxy_model = QSortFilterProxyModel()
+        proxy_model.setSourceModel(self.file_model)
+        self.tree_view.setModel(proxy_model)
+
+        # sort the items in the tree view widget
+        proxy_model.sort(0, order=Qt.AscendingOrder)
+
+    def createFile(self):
+        current_time = random.randint(0, 100)
+        # Set the file path and name
+        file_path = "sid/sidSaved/ANew" + str(current_time) + ".txt"
+
+        # Define the content of the file
+        file_content = "This is the content of my new file!"
+
+        # Create the file and write the content to it
+        with open(file_path, "w") as file:
+            file.write(file_content)
+
+
+
+    def remover(self):
+        # get the selected index from the tree view
+        selected_index = self.tree.currentIndex()
+
+        # delete the file or folder at the selected index
+        file_system_model = self.tree.model()
+        file_system_model.remove(selected_index)
+    
+
+
     def setupUi(self, Recordings_2):
         if not Recordings_2.objectName():
             Recordings_2.setObjectName(u"Recordings_2")
         Recordings_2.resize(1824, 917)
         self.frame = QFrame(Recordings_2)
         self.frame.setObjectName(u"frame")
-        self.frame.setGeometry(QRect(250, 40, 1471, 1050))
+        self.frame.setGeometry(QRect(130, 40, 1471, 1050))
         self.frame.setStyleSheet(u"background-color: rgb(255, 255, 255);border-radius: 50px;")
         self.frame.setFrameShape(QFrame.StyledPanel)
         self.frame.setFrameShadow(QFrame.Raised)
 
-        dir_path =r'sid/sidSaved'
+        dir_path = "sid/sidSaved"
 
         self.model = QFileSystemModel(self.frame)
         self.model.setRootPath(dir_path)
@@ -84,6 +122,9 @@ class Ui_Recordings_2(object):
         addImage = addImage.scaled(QSize(32,32))
         addPng = QIcon(addImage)
         self.pushButton_2.setIcon(addPng)
+        self.pushButton_2.clicked.connect(self.createFile)
+
+
 
 
         self.trashButton = QPushButton(self.frame)
@@ -105,24 +146,10 @@ class Ui_Recordings_2(object):
         trashImage = trashImage.scaled(QSize(32,32))
         trashPng = QIcon(trashImage)
         self.trashButton.setIcon(trashPng)
+        self.trashButton.clicked.connect(self.remover)
 
 
-        self.sortButton = QPushButton(self.frame)
-        self.sortButton.setObjectName(u"sortButton")
-        self.sortButton.setGeometry(QRect(350, 10, 61, 51))
-        self.sortButton.setStyleSheet(u"background-color: rgb(0, 0, 255);\n"
-"border-top-color: rgb(85, 255, 255);\n"
-"border-color: rgb(85, 255, 255);\n"
-"color: rgb(255, 255, 255);\n"
-"\n"
-"background-color: rgb(0, 0, 0);\n"
-"    border-radius: 120px;\n"
-"    border-style: outset;\n"
-"   border: 2px solid blue;\n"
-"    padding: 5px;"
-"font-size:15px;\n"
-"font-weight:800;")
-
+     
 
 
 
@@ -159,7 +186,6 @@ class Ui_Recordings_2(object):
     def retranslateUi(self, Recordings_2):
         Recordings_2.setWindowTitle(QCoreApplication.translate("Recordings_2", u"Dialog", None))
         self.label.setText(QCoreApplication.translate("Recordings_2", u"Files", None))
-        self.sortButton.setText(QCoreApplication.translate("Recordings_2", u"Sort", None))
       
         self.label_9.setText("")
     # retranslateUi

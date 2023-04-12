@@ -21,13 +21,23 @@ from PySide6.QtWidgets import (QApplication, QDialog, QFrame, QHeaderView,
 from ui import rc_imagesQ
 
 class Ui_Recordings_2(object):
+
+
+    def add_row(self):
+        rowCount = self.tableWidget.rowCount()  # get current row count
+        self.tableWidget.insertRow(rowCount)  # insert new row at end
+        newItem = QTableWidgetItem("New Item")
+        self.tableWidget.setItem(rowCount, 0, newItem)
+
+
+
     def setupUi(self, Recordings_2):
         if not Recordings_2.objectName():
             Recordings_2.setObjectName(u"Recordings_2")
         Recordings_2.resize(1824, 917)
         self.frame = QFrame(Recordings_2)
         self.frame.setObjectName(u"frame")
-        self.frame.setGeometry(QRect(250, 40, 1471, 1050))
+        self.frame.setGeometry(QRect(130, 40, 1471, 1050))
         self.frame.setStyleSheet(u"background-color: rgb(255, 255, 255);border-radius: 50px;")
         self.frame.setFrameShape(QFrame.StyledPanel)
         self.frame.setFrameShadow(QFrame.Raised)
@@ -72,6 +82,8 @@ class Ui_Recordings_2(object):
         addPng = QIcon(addImage)
         self.pushButton_2.setIcon(addPng)
 
+
+
         self.label = QLabel(self.frame)
         self.label.setObjectName(u"label")
         self.label.setGeometry(QRect(570, -10, 381, 100))
@@ -82,6 +94,9 @@ class Ui_Recordings_2(object):
         self.line_2.setGeometry(QRect(-30, 90, 1491, 20))
         self.line_2.setFrameShape(QFrame.HLine)
         self.line_2.setFrameShadow(QFrame.Sunken)
+
+
+
         self.tableWidget = QTableWidget(self.frame)
         if (self.tableWidget.columnCount() < 1):
             self.tableWidget.setColumnCount(1)
@@ -92,6 +107,7 @@ class Ui_Recordings_2(object):
         self.tableWidget.setHorizontalHeaderItem(0, __qtablewidgetitem)
         self.tableWidget.setColumnWidth(0,1475)
         
+        self.pushButton_2.clicked.connect(self.add_row)
 
         self.tableWidget.setObjectName(u"tableWidget")
         self.tableWidget.setGeometry(QRect(0, 100, 1471, 1010))

@@ -20,13 +20,20 @@ from PySide6.QtWidgets import (QApplication, QDialog, QFrame, QHeaderView,
     QTableWidgetItem, QWidget)
 from ui import rc_imagesQ
 class Ui_Recordings_2(object):
+
+    def add(self):
+        selected_items = self.tableWidget.selectedItems()
+        for item in selected_items:
+            item.setText("New Event")
+
+
     def setupUi(self, Recordings_2):
         if not Recordings_2.objectName():
             Recordings_2.setObjectName(u"Recordings_2")
         Recordings_2.resize(1824, 917)
         self.frame = QFrame(Recordings_2)
         self.frame.setObjectName(u"frame")
-        self.frame.setGeometry(QRect(250, 40, 1471, 1050))
+        self.frame.setGeometry(QRect(130, 40, 1471, 1050))
         self.frame.setStyleSheet(u"background-color: rgb(255, 255, 255);border-radius: 50px;")
         self.frame.setFrameShape(QFrame.StyledPanel)
         self.frame.setFrameShadow(QFrame.Raised)
@@ -123,6 +130,7 @@ class Ui_Recordings_2(object):
         
 
 
+        self.pushButton_2.clicked.connect(self.add)
 
 
         

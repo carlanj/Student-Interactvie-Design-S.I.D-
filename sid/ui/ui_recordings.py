@@ -7,6 +7,9 @@
 ##
 ## WARNING! All changes made in this file will be lost when recompiling UI file!
 ################################################################################
+import numpy as np
+import imageio
+import pyscreenshot as ImageGrab
 
 from PySide6.QtCore import (QCoreApplication, QDate, QDateTime, QLocale,
     QMetaObject, QObject, QPoint, QRect,
@@ -21,13 +24,42 @@ from PySide6.QtWidgets import (QApplication, QDialog, QFrame, QHeaderView,
 from ui import rc_imagesQ
 
 class Ui_Recordings_2(object):
+
+    def add_row(self):
+        rowCount = self.tableWidget.rowCount()  # get current row count
+        self.tableWidget.insertRow(rowCount)  # insert new row at end
+        newItem = QTableWidgetItem("New Item")
+        self.tableWidget.setItem(rowCount, 0, newItem)
+
+    def recorder(self):
+        filename = "screen_capture.mp4"
+        fps = 30.0
+
+        with imageio.get_writer(filename, fps=fps) as writer:
+            while True:
+                try:
+                    # Take a screenshot
+                    im = ImageGrab.grab()
+
+                    # Convert to numpy array
+                    im = np.array(im)
+
+                    # Add to the video writer
+                    writer.append_data(im)
+
+                except KeyboardInterrupt:
+                    # Stop recording on keyboard interrupt
+                    break
+
+
+
     def setupUi(self, Recordings_2):
         if not Recordings_2.objectName():
             Recordings_2.setObjectName(u"Recordings_2")
         Recordings_2.resize(1824, 917)
         self.frame = QFrame(Recordings_2)
         self.frame.setObjectName(u"frame")
-        self.frame.setGeometry(QRect(250, 40, 1471, 1050))
+        self.frame.setGeometry(QRect(120, 40, 1471, 1050))
         self.frame.setStyleSheet(u"background-color: rgb(255, 255, 255);border-radius: 50px;")
         self.frame.setFrameShape(QFrame.StyledPanel)
         self.frame.setFrameShadow(QFrame.Raised)
