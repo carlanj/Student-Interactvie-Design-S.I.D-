@@ -466,7 +466,6 @@ class Ui_MainWindow(object):
         self.remButt.setText(QCoreApplication.translate("MainWindow", u"Reminders", None))
         self.filesButt.setText(QCoreApplication.translate("MainWindow", u"Files", None))
         self.schedButt.setText(QCoreApplication.translate("MainWindow", u"Schedule ", None))
-        self.recordButton.setText(QCoreApplication.translate("MainWindow", u"REC", None))
 
 
     # retranslateUi
