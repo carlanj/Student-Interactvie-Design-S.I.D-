@@ -79,7 +79,7 @@ class Ui_Recordings_2(object):
 "    ptrashing: 5px;"
 "font-size:35px;\n"
 "font-weight:800;")
-        backImage = QPixmap("sid/images/arrow.png")
+        backImage = QPixmap("images/arrow.png")
         backImage = backImage.scaled(QSize(32,32))
         backPng = QIcon(backImage)
         self.pushButton.setIcon(backPng)
@@ -100,7 +100,7 @@ class Ui_Recordings_2(object):
 "    ptrashing: 5px;"
 "font-size:35px;\n"
 "font-weight:800;")
-        trashImage = QPixmap("sid/images/trash.png")
+        trashImage = QPixmap("images/trash.png")
         trashImage = trashImage.scaled(QSize(32,32))
         trashPng = QIcon(trashImage)
         self.pushButton_2.setIcon(trashPng)
