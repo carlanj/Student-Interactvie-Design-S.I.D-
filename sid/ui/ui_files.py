@@ -38,7 +38,7 @@ class Ui_Recordings_2(object):
     def createFile(self):
         current_time = random.randint(0, 100)
         # Set the file path and name
-        file_path = "sid/sidSaved/ANew" + str(current_time) + ".txt"
+        file_path = "sidSaved/ANew" + str(current_time) + ".txt"
 
         # Define the content of the file
         file_content = "This is the content of my new file!"
@@ -70,7 +70,7 @@ class Ui_Recordings_2(object):
         self.frame.setFrameShape(QFrame.StyledPanel)
         self.frame.setFrameShadow(QFrame.Raised)
 
-        dir_path = "sid/sidSaved"
+        dir_path = "sidSaved"
 
         self.model = QFileSystemModel(self.frame)
         self.model.setRootPath(dir_path)
@@ -97,7 +97,7 @@ class Ui_Recordings_2(object):
 "    padding: 5px;"
 "font-size:35px;\n"
 "font-weight:800;")
-        backImage = QPixmap("sid/images/arrow.png")
+        backImage = QPixmap("images/arrow.png")
         backImage = backImage.scaled(QSize(32,32))
         backPng = QIcon(backImage)
         self.pushButton.setIcon(backPng)
@@ -118,7 +118,7 @@ class Ui_Recordings_2(object):
 "    padding: 5px;"
 "font-size:35px;\n"
 "font-weight:800;")
-        addImage = QPixmap("sid/images/add.png")
+        addImage = QPixmap("images/add.png")
         addImage = addImage.scaled(QSize(32,32))
         addPng = QIcon(addImage)
         self.pushButton_2.setIcon(addPng)
@@ -142,7 +142,7 @@ class Ui_Recordings_2(object):
 "    padding: 5px;"
 "font-size:35px;\n"
 "font-weight:800;")
-        trashImage = QPixmap("sid/images/trash.png")
+        trashImage = QPixmap("images/trash.png")
         trashImage = trashImage.scaled(QSize(32,32))
         trashPng = QIcon(trashImage)
         self.trashButton.setIcon(trashPng)
