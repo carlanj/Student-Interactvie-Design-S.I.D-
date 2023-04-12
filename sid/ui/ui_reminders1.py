@@ -57,7 +57,7 @@ class Ui_Recordings_2(object):
 "    padding: 5px;"
 "font-size:35px;\n"
 "font-weight:800;")
-        backImage = QPixmap("sid/images/arrow.png")
+        backImage = QPixmap("images/arrow.png")
         backImage = backImage.scaled(QSize(32,32))
         backPng = QIcon(backImage)
         self.pushButton.setIcon(backPng)
@@ -77,7 +77,7 @@ class Ui_Recordings_2(object):
 "    padding: 5px;"
 "font-size:35px;\n"
 "font-weight:800;")
-        addImage = QPixmap("sid/images/add.png")
+        addImage = QPixmap("images/add.png")
         addImage = addImage.scaled(QSize(32,32))
         addPng = QIcon(addImage)
         self.pushButton_2.setIcon(addPng)
