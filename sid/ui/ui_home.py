@@ -64,7 +64,7 @@ from PySide6.QtGui import (QBrush, QColor, QConicalGradient, QCursor,
 from PySide6.QtWidgets import (QApplication, QFrame, QLabel, QMainWindow,
     QMenuBar, QPushButton, QSizePolicy, QStatusBar,
     QWidget)
-from ui import rc_imagesQ, rc_mic, ui_files, ui_recordings, ui_reminders1, ui_home, ui_schedule, ui_scheduleTest
+from ui import rc_imagesQ, rc_mic, ui_files, ui_recordings, ui_reminders1, ui_home, ui_schedule
 import test
 class Ui_MainWindow(object):
 
@@ -145,23 +145,6 @@ class Ui_MainWindow(object):
 
 
 
-        self.appsButton = QPushButton(MainWindow)
-        self.appsButton.setObjectName(u"appsButton")
-        self.appsButton.setGeometry(QRect(835, 520, 86, 46))
-        self.appsButton.setStyleSheet(u"background-color: rgb(0, 0, 0);\n"
-"border-top-color: rgb(85, 255, 255);\n"
-"border-color: rgb(85, 255, 255);\n"
-"color: rgb(255, 255, 255);\n"
-"\n"
-"background-color: rgb(0, 0, 0);\n"
-"    border-radius: 120px;\n"
-"    border-style: outset;\n"
-"   border: 2px solid blue;\n"
-"    padding: 5px;"
-"font-size:25px;\n"
-"font-weight:800;")
-        self.appsButton.raise_()
-        self.appsButton.clicked.connect(self.appShower)
 
 
         self.recButt = QPushButton(MainWindow)
@@ -499,7 +482,6 @@ class Ui_MainWindow(object):
         self.filesButt.setText(QCoreApplication.translate("MainWindow", u"Files", None))
         self.schedButt.setText(QCoreApplication.translate("MainWindow", u"Schedule ", None))
         self.recordButton.setText(QCoreApplication.translate("MainWindow", u"REC", None))
-        self.appsButton.setText(QCoreApplication.translate("MainWindow", u"APPS", None))
 
 
     # retranslateUi
