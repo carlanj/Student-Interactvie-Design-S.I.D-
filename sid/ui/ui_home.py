@@ -103,22 +103,7 @@ class Ui_MainWindow(object):
 "    padding: 5px;\n"
 "")
 
-        self.recordButton = QPushButton(MainWindow)
-        self.recordButton.setObjectName(u"recordButton")
-        self.recordButton.setGeometry(QRect(835, 360, 86, 46))
-        self.recordButton.setStyleSheet(u"background-color: rgb(0, 0, 0);\n"
-"border-top-color: rgb(85, 255, 255);\n"
-"border-color: rgb(85, 255, 255);\n"
-"color: rgb(255, 255, 255);\n"
-"\n"
-"background-color: rgb(0, 0, 0);\n"
-"    border-radius: 120px;\n"
-"    border-style: outset;\n"
-"   border: 2px solid blue;\n"
-"    padding: 5px;"
-"font-size:25px;\n"
-"font-weight:800;")
-        self.recordButton.raise_()
+       
 
 
         self.micButton = QPushButton(MainWindow)
@@ -137,7 +122,7 @@ class Ui_MainWindow(object):
 "font-size:25px;\n"
 "font-weight:800;")
         self.micButton.raise_()
-        micImage = QPixmap(r"sid/images/mic.png")
+        micImage = QPixmap("images/mic.png")
         micImage = micImage.scaled(QSize(32,32))
         micPng = QIcon(micImage)
         self.micButton.setIcon(micPng)
